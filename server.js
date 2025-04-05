@@ -9,8 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://love4ranimalsai.com' // ✅ Only allow Carrd's custom domain
+  origin: 'https://love4ranimalsai.com',
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type']
 }));
+
 app.use(express.json());
 
 // Optional: Prevent GET errors in browser
