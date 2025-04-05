@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: 'https://love4ranimalsai.com',
-  methods: ['POST'],
-  allowedHeaders: ['Content-Type']
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: false
 }));
-
 app.use(express.json());
 
 // Optional: Prevent GET errors in browser
