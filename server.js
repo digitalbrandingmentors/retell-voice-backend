@@ -14,6 +14,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type'],
   credentials: false
 }));
+
 app.use(express.json());
 
 // Optional: Prevent GET errors in browser
