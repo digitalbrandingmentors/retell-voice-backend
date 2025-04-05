@@ -8,7 +8,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://love4ranimalsai.com' // ✅ Only allow Carrd's custom domain
+}));
 app.use(express.json());
 
 // Optional: Prevent GET errors in browser
